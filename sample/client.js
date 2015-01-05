@@ -2,7 +2,7 @@ var Client = require('..').client;
 
 // remote service interface path info list
 var records = [
-  {namespace: 'user', serverType: 'test', path: __dirname + '/remote/test'}
+  {namespace: 'fuck', serverType: 'test', path: __dirname + '/remote/test'}
 ];
 
 var context = {
@@ -33,9 +33,10 @@ client.start(function(err) {
   client.addProxies(records);
   client.addServers(servers);
 
-  client.proxies.user.test.service.echo(routeParam, 'hello', function(err, resp) {
+  client.proxies.fuck.test.service.echo(routeParam, 'hello', function(err, resp) {
     if(err) {
       console.error(err.stack);
+      console.log(err.code);
     }
     console.log(resp);
   });

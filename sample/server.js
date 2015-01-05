@@ -2,7 +2,7 @@ var Server = require('..').server;
 
 // remote service path info list
 var paths = [
-  {namespace: 'user', path: __dirname + '/remote/test'}
+  {namespace: 'fuck', path: __dirname + '/remote/test'}
 ];
 
 var port = 3333;
